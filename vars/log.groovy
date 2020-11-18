@@ -1,7 +1,7 @@
-def CREATE_RM_ENDPOINT = "/rest/api/2/issue";
+CREATE_RM_ENDPOINT = "/rest/api/2/issue";
 
 def info(message) {
-    echo "INFO: ${message}"
+    echo "INFO: ${message} ${CREATE_RM_ENDPOINT}"
 }
 
 def warning(message) {
