@@ -13,10 +13,10 @@ class Jira implements Serializable {
         def i = 0;
         def retryDelay = 15;
 
-        steps.withCredentials([steps.usernameColonPassword(credentialsId: 'mateusz', variable: 'JIRA_CREDENTIALS')]) {
+        steps.withCredentials([steps.usernameColonPassword(credentialsId: 'mateusz', variable: 'JIRA_CREDENTIALSS')]) {
 
             steps.retry(8) { // 2 minutes
-                steps.echo "Password injected is: $JIRA_CREDENTIALS"
+                steps.echo "Password injected is: $JIRA_CREDENTIALSS"
                 steps.sleep(retryDelay);
 
                 if (i < 5) {
