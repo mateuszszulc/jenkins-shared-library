@@ -3,12 +3,10 @@ import groovy.json.JsonSlurper
 
 class Jira implements Serializable {
     def JIRA_SERVER = "https://jira.lumesse.top"
-
     def steps
 
     Jira(steps, JIRA_CREDENTIALS) {
         this.steps = steps;
-        this.JIRA_CREDENTIALS = JIRA_CREDENTIALS;
     }
 
     def await() {
