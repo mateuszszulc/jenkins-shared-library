@@ -1,8 +1,6 @@
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 
-def UGLY_GLOBAL = "I'm the ugly global variable";
-
 class Jira implements Serializable {
     def JIRA_SERVER = "https://jira.lumesse.top"
 
@@ -15,7 +13,6 @@ class Jira implements Serializable {
     }
 
     def post(jsonObject, endpoint) {
-	steps.echo "${UGLY_GLOBAL}"
         def json = JsonOutput.toJson(jsonObject)
         steps.echo "Hello world $JIRA_SERVER"
         steps.echo "$json"
