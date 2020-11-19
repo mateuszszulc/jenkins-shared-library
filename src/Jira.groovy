@@ -10,6 +10,7 @@ class Jira implements Serializable {
     Jira(steps, JIRA_CREDENTIALS) {
         this.steps = steps;
         this.JIRA_CREDENTIALS = JIRA_CREDENTIALS;
+        log.info("dupa");
     }
 
     def post(jsonObject, endpoint) {
