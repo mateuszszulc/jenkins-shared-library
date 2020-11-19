@@ -16,7 +16,7 @@ class Jira implements Serializable {
         steps.withCredentials([steps.usernameColonPassword(credentialsId: 'mateusz', variable: 'JIRA_CREDENTIALSS')]) {
 
             steps.retry(8) { // 2 minutes
-                steps.echo "Password injected is: $JIRA_CREDENTIALSS"
+                steps.echo "Password injected is: ${steps.JIRA_CREDENTIALSS}"
                 steps.sleep(retryDelay);
 
                 if (i < 5) {
