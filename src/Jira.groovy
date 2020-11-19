@@ -11,7 +11,7 @@ class Jira implements Serializable {
 
     def await() {
         def i = 0;
-        def retryDelay = 15;
+        def retryDelay = 1;
 
         steps.withCredentials([steps.usernameColonPassword(credentialsId: 'mateusz', variable: 'JIRA_CREDENTIALSS')]) {
 
@@ -19,7 +19,7 @@ class Jira implements Serializable {
                 steps.echo "Password injected is: ${steps.JIRA_CREDENTIALSS}"
                 steps.sleep(retryDelay);
 
-                if (i < 5) {
+                if (i < 10) {
                     i++
                     steps.echo "Issue status ID: $i"
                     steps.error("Wrong status $i");
