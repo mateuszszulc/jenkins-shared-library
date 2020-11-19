@@ -12,13 +12,7 @@ class Jira implements Serializable {
         this.JIRA_CREDENTIALS = JIRA_CREDENTIALS;
     }
 
-    def post(jsonObject, endpoint) {
-        steps.sayHello 'Joe'
-        steps.echo "${steps.log.CREATE_RM_ENDPOINT}"
-        def json = JsonOutput.toJson(jsonObject)
-        steps.echo "Hello world $JIRA_SERVER"
-        steps.echo "$json"
-        return new JsonSlurper().parseText('{"hello" : "world"}')
+    def test() {
+        steps.echo "${JiraConstants.transitionDeploymentFinished}";
     }
 }
-
