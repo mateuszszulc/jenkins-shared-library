@@ -15,6 +15,7 @@ class Jira implements Serializable {
     def post(jsonObject, endpoint) {
         def json = JsonOutput.toJson(jsonObject)
         steps.echo "Hello world $JIRA_SERVER"
+        steps.echo "$json"
         return new JsonSlurper().parseText('{"hello" : "world"}')
     }
 }
