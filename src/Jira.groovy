@@ -13,6 +13,7 @@ class Jira implements Serializable {
     }
 
     def post(jsonObject, endpoint) {
+        this.steps.echo "${this.steps.log.CREATE_RM_ENDPOINT}"
         def json = JsonOutput.toJson(jsonObject)
         steps.echo "Hello world $JIRA_SERVER"
         steps.echo "$json"
