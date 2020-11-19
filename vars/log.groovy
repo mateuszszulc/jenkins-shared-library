@@ -1,3 +1,5 @@
+package org.foo
+
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 class Jira implements Serializable {
